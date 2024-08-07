@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0ab72d9a66d74a8babc64ed77b2f8e80" Name="Diagram1">
+        <EntityTypeShape EntityType="OhrHaemetModel.Charge" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OhrHaemetModel.Child" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OhrHaemetModel.CreditCard" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OhrHaemetModel.Family" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="OhrHaemetModel.HorahatKeva" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="OhrHaemetModel.PaymentAccount" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="OhrHaemetModel.sysdiagrams" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OhrHaemetModel.Transaction" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="OhrHaemetModel.TypeCharge" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="OhrHaemetModel.User" Width="1.5" PointX="8.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OhrHaemetModelStoreContainer" CdmEntityContainer="OhrHaemetEntities">
+    <EntitySetMapping Name="Charge">
+      <EntityTypeMapping TypeName="OhrHaemetModel.Charge">
+        <MappingFragment StoreEntitySet="Charge">
+          <ScalarProperty Name="PaymentAccountsID" ColumnName="PaymentAccountsID" />
+          <ScalarProperty Name="DatePayment" ColumnName="DatePayment" />
+          <ScalarProperty Name="BillingDate" ColumnName="BillingDate" />
+          <ScalarProperty Name="TypeChargeID" ColumnName="TypeChargeID" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
+          <ScalarProperty Name="ChargeID" ColumnName="ChargeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Child">
+      <EntityTypeMapping TypeName="OhrHaemetModel.Child">
+        <MappingFragment StoreEntitySet="Child">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Clinic" ColumnName="Clinic" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="ChildTZ" ColumnName="ChildTZ" />
+          <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+          <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreditCard">
+      <EntityTypeMapping TypeName="OhrHaemetModel.CreditCard">
+        <MappingFragment StoreEntitySet="CreditCard">
+          <ScalarProperty Name="TZCardHolder" ColumnName="TZCardHolder" />
+          <ScalarProperty Name="NameCardHolder" ColumnName="NameCardHolder" />
+          <ScalarProperty Name="SecurityIterature" ColumnName="SecurityIterature" />
+          <ScalarProperty Name="Validity" ColumnName="Validity" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="PaymentAccountsID" ColumnName="PaymentAccountsID" />
+          <ScalarProperty Name="CreditCardID" ColumnName="CreditCardID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Family">
+      <EntityTypeMapping TypeName="OhrHaemetModel.Family">
+        <MappingFragment StoreEntitySet="Family">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="MotherCellPhon" ColumnName="MotherCellPhon" />
+          <ScalarProperty Name="MotherID" ColumnName="MotherID" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="FatherCellPhon" ColumnName="FatherCellPhon" />
+          <ScalarProperty Name="FatherTZ" ColumnName="FatherTZ" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="Phon" ColumnName="Phon" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HorahatKeva">
+      <EntityTypeMapping TypeName="OhrHaemetModel.HorahatKeva">
+        <MappingFragment StoreEntitySet="HorahatKeva">
+          <ScalarProperty Name="MonthlyBillingDate" ColumnName="MonthlyBillingDate" />
+          <ScalarProperty Name="NameAccountHolders" ColumnName="NameAccountHolders" />
+          <ScalarProperty Name="BranchNumber" ColumnName="BranchNumber" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="BankNumber" ColumnName="BankNumber" />
+          <ScalarProperty Name="PaymentAccountsID" ColumnName="PaymentAccountsID" />
+          <ScalarProperty Name="HorahatKevaID" ColumnName="HorahatKevaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentAccount">
+      <EntityTypeMapping TypeName="OhrHaemetModel.PaymentAccount">
+        <MappingFragment StoreEntitySet="PaymentAccount">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="PeymentType" ColumnName="PeymentType" />
+          <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
+          <ScalarProperty Name="PaymentAccountsID" ColumnName="PaymentAccountsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="OhrHaemetModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transaction">
+      <EntityTypeMapping TypeName="OhrHaemetModel.Transaction">
+        <MappingFragment StoreEntitySet="Transaction">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ChargesID" ColumnName="ChargesID" />
+          <ScalarProperty Name="TransactionsID" ColumnName="TransactionsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeCharge">
+      <EntityTypeMapping TypeName="OhrHaemetModel.TypeCharge">
+        <MappingFragment StoreEntitySet="TypeCharge">
+          <ScalarProperty Name="AmountToPay" ColumnName="AmountToPay" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TypeChargesID" ColumnName="TypeChargesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="OhrHaemetModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteCharge" FunctionName="OhrHaemetModel.Store.DeleteCharge" />
+    <FunctionImportMapping FunctionImportName="DeleteChild" FunctionName="OhrHaemetModel.Store.DeleteChild" />
+    <FunctionImportMapping FunctionImportName="DeleteCreditCard" FunctionName="OhrHaemetModel.Store.DeleteCreditCard" />
+    <FunctionImportMapping FunctionImportName="DeleteFamily" FunctionName="OhrHaemetModel.Store.DeleteFamily" />
+    <FunctionImportMapping FunctionImportName="DeleteHorahatKeva" FunctionName="OhrHaemetModel.Store.DeleteHorahatKeva" />
+    <FunctionImportMapping FunctionImportName="DeletePaymentAccount" FunctionName="OhrHaemetModel.Store.DeletePaymentAccount" />
+    <FunctionImportMapping FunctionImportName="DeleteTransaction" FunctionName="OhrHaemetModel.Store.DeleteTransaction" />
+    <FunctionImportMapping FunctionImportName="DeleteTypeCharge" FunctionName="OhrHaemetModel.Store.DeleteTypeCharge" />
+    <FunctionImportMapping FunctionImportName="DeleteUser" FunctionName="OhrHaemetModel.Store.DeleteUser" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="OhrHaemetModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="OhrHaemetModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="OhrHaemetModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="OhrHaemetModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OhrHaemetModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="OhrHaemetModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OhrHaemetModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="OhrHaemetModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="OhrHaemetModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Server/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="User">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" type="xs:int" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="BaseEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsChanged" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseEntity" nillable="true" type="tns:BaseEntity" />
+  <xs:complexType name="ArrayOfFamily">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Family" nillable="true" type="tns:Family" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFamily" nillable="true" type="tns:ArrayOfFamily" />
+  <xs:complexType name="Family">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Adress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FamilyID" type="xs:int" />
+          <xs:element minOccurs="0" name="FatherCellPhon" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FatherName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FatherTZ" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MotherCellPhon" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MotherID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MotherName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phon" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalFamilyDebts" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Family" nillable="true" type="tns:Family" />
+  <xs:complexType name="ArrayOfTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction" nillable="true" type="tns:Transaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransaction" nillable="true" type="tns:ArrayOfTransaction" />
+  <xs:complexType name="Transaction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Charge" nillable="true" type="tns:Charge" />
+          <xs:element minOccurs="0" name="ChargesID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionsID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Transaction" nillable="true" type="tns:Transaction" />
+  <xs:complexType name="Charge">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BillingDate" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="ChargeID" type="xs:int" />
+          <xs:element minOccurs="0" name="Child" nillable="true" type="tns:Child" />
+          <xs:element minOccurs="0" name="ChildID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DatePayment" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="Family" nillable="true" type="tns:Family" />
+          <xs:element minOccurs="0" name="FamilyID" type="xs:int" />
+          <xs:element minOccurs="0" name="PaymentAccountsID" type="xs:int" />
+          <xs:element minOccurs="0" name="TypeCharge" nillable="true" type="tns:TypeCharge" />
+          <xs:element minOccurs="0" name="TypeChargeID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Charge" nillable="true" type="tns:Charge" />
+  <xs:complexType name="Child">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChildID" type="xs:int" />
+          <xs:element minOccurs="0" name="ChildName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChildTZ" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Class" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Clinic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="FamilyID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Child" nillable="true" type="tns:Child" />
+  <xs:complexType name="TypeCharge">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AmountToPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeChargesID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TypeCharge" nillable="true" type="tns:TypeCharge" />
+  <xs:complexType name="ArrayOfChild">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Child" nillable="true" type="tns:Child" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChild" nillable="true" type="tns:ArrayOfChild" />
+  <xs:complexType name="ArrayOfPaymentAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentAccount" nillable="true" type="tns:PaymentAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaymentAccount" nillable="true" type="tns:ArrayOfPaymentAccount" />
+  <xs:complexType name="PaymentAccount">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreditCard" nillable="true" type="tns:CreditCard" />
+          <xs:element minOccurs="0" name="FamilyID" type="xs:int" />
+          <xs:element minOccurs="0" name="HorahatKeva" nillable="true" type="tns:HorahatKeva" />
+          <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PaymentAccountsID" type="xs:int" />
+          <xs:element minOccurs="0" name="PeymentType" nillable="true" type="xs:short" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PaymentAccount" nillable="true" type="tns:PaymentAccount" />
+  <xs:complexType name="CreditCard">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreditCardID" type="xs:int" />
+          <xs:element minOccurs="0" name="NameCardHolder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaymentAccountsID" type="xs:int" />
+          <xs:element minOccurs="0" name="SecurityIterature" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TZCardHolder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Validity" nillable="true" type="ser:duration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreditCard" nillable="true" type="tns:CreditCard" />
+  <xs:complexType name="HorahatKeva">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BankNumber" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BranchNumber" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HorahatKevaID" type="xs:int" />
+          <xs:element minOccurs="0" name="MonthlyBillingDate" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="NameAccountHolders" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaymentAccountsID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HorahatKeva" nillable="true" type="tns:HorahatKeva" />
+  <xs:complexType name="ArrayOfCharge">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Charge" nillable="true" type="tns:Charge" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCharge" nillable="true" type="tns:ArrayOfCharge" />
+</xs:schema>

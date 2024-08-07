@@ -1,0 +1,241 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="OrAhemet.FamiliesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OrAhemet"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"   
+    xmlns:charts="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:s ="using:OrAhemet.ServiceReference1"
+                          
+    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid FlowDirection="RightToLeft" Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- עמודה ימין -->
+        <Grid Grid.Column="0">
+            <StackPanel x:ConnectionId='13' x:Name="FilterDisplay" FlowDirection="RightToLeft" Margin="20"  Visibility="Collapsed">
+                <TextBlock  FontSize="25">
+                <Bold>סינון תצוגה:</Bold>
+                </TextBlock>
+
+                <StackPanel>
+                    <RadioButton x:ConnectionId='14' x:Name="rbFamily" Content="משפחות" FontSize="25" GroupName="FilterDisplay"                           />
+                    <RadioButton x:ConnectionId='15'  x:Name="rbDebt" Content="חובות בלבד" FontSize="25" GroupName="FilterDisplay"                         />
+                </StackPanel>
+
+
+                <!--<charts:Chart
+                        x:Name="PieChart"
+                        Title="Pie Chart"
+                        Margin="0,0">
+                    <charts:Chart.Series>
+                        <charts:PieSeries
+                                Title="Population"
+                                ItemsSource="{Binding Items}"
+                                IndependentValueBinding="{Binding Name}"
+                                DependentValueBinding="{Binding Value}"
+                                IsSelectionEnabled="True" />
+                    </charts:Chart.Series>
+                </charts:Chart>-->
+
+                <!--<Button x:Name="AddUser" Margin="20">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <TextBlock Text="להוספת משתמשים" Margin="10,0"/>
+                        <SymbolIcon Symbol="Add"/>
+                    </StackPanel>
+                </Button>-->
+
+            </StackPanel>
+        </Grid>
+
+
+        <!-- עמודה שמאל -->
+        <Grid Grid.Column="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <!-- שורת החיפוש -->
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="10"/>
+                <!-- גריד -->
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0"/>
+                <!-- לחצני פקודות -->
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!-- שורת החיפוש -->
+            <Grid  Grid.Row="1" Grid.Column="1" FlowDirection="RightToLeft">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="850"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:ConnectionId='11' PlaceholderText="חיפוש לפי משפחה" 
+                             Grid.Row="0"  Grid.Column="0"    
+                             FontSize="20" 
+                             HorizontalAlignment="Stretch"
+                                                                    
+                             x:Name="txtSearchText"
+                             Margin="0,20,10,5"/>
+
+                <Button x:ConnectionId='12' x:Name="btnUser" HorizontalAlignment="Right"
+                            CornerRadius="90,90,90,90"
+                            Height="64"
+                            Width="64" 
+                            Grid.RowSpan="3" 
+                            Grid.Row="0" Grid.Column="1"    
+                                                 >
+                    <Image Source="/Assets/user.png" VerticalAlignment="Center" />
+
+                    <!--<Image Source="/Assets/user (1).png" VerticalAlignment="Center" />-->
+                </Button>
+
+
+            </Grid>
+
+
+            <!-- גריד -->
+            <Grid  Grid.Row="3" Grid.Column="1">
+                <Popup x:ConnectionId='5' x:Name="Nav_Pop" 
+                       IsOpen="False" 
+                       Width="400" 
+                       Height="400"
+                       IsLightDismissEnabled="True"
+                       VerticalOffset="11"
+                       HorizontalOffset="200"
+                       VerticalAlignment="Top" HorizontalAlignment="Right"
+                       LightDismissOverlayMode="On" Margin="0,-12,117,0">
+                    <Border Background="White" BorderBrush="Black" BorderThickness="2">
+                        <Grid Padding="50,80">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="10"/>
+                            </Grid.RowDefinitions>
+
+                            <Image Source="/Assets/user.png" Grid.Row="1" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Row="3" HorizontalAlignment="Center"
+                                       FontSize="15" Foreground="Gray">
+                                <Run Text="{Binding Path= UserName}" FontSize="25" Foreground="Black"/>
+                                <Run Text="("/><Run Text="{Binding Path= UserType}"/><Run Text=")"/>
+                            </TextBlock>
+                            <Button x:ConnectionId='8' x:Name="btnEditUser"
+                            Grid.RowSpan="2" 
+                            
+                            Grid.Row="5" HorizontalAlignment="Stretch" Background="White"                          >
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="/Assets/Background copy.png" HorizontalAlignment="Right"/>
+                                        <TextBlock Text="לעריכת משתמש" HorizontalAlignment="Right"/>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                            <Button x:ConnectionId='9' x:Name="btnAddUser"
+                            Grid.RowSpan="2" 
+                            Grid.Row="7" HorizontalAlignment="Stretch" Background="White"                         >
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="/Assets/add.png" HorizontalAlignment="Right"/>
+                                        <TextBlock Text="להוספת משתמש חדש" HorizontalAlignment="Right"/>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                            <Button x:ConnectionId='10' x:Name="btnExitUser"
+                            Grid.RowSpan="2" 
+                            Grid.Row="9" HorizontalAlignment="Stretch" Background="White"                          >
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                        <Image Source="/Assets/change.png" />
+                                        <TextBlock Text="יציאה" />
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+
+                        </Grid>
+                    </Border>
+                </Popup>
+                <controls:DataGrid x:ConnectionId='6' x:Name="dgTransactions" 
+                                   Padding="0,0,0,500" 
+                                   Grid.Row="1" 
+                                   IsReadOnly="False"
+                                   AutoGenerateColumns="False" 
+                                   Background="LightGray"
+                                   IsDoubleTapEnabled="True"
+                                                                             
+                                                                                     >
+                    <controls:DataGrid.Columns>
+                        <controls:DataGridTextColumn Binding="{Binding Charges.Family.LastName}" Header="שם משפחה" Width="150"/>
+                        <controls:DataGridTextColumn Binding="{Binding Charges.DatePayment}" Header="תאריך לגביה" Width="150"/>
+                        <controls:DataGridTextColumn Binding="{Binding Charges.TypeCharge.AmountToPay}" Header="סכום לחיוב" Width="150"/>
+                        <controls:DataGridCheckBoxColumn Binding="{Binding Status}" Header="בוצע?" Width="80"/>
+                    </controls:DataGrid.Columns>
+
+                </controls:DataGrid>
+                <controls:DataGrid x:ConnectionId='7' x:Name="dgFamily" 
+                                   Padding="0,0,0,500" 
+                                   Grid.Row="1" 
+                                   IsReadOnly="True"                                   
+                                   AutoGenerateColumns="False" 
+                                   Background="LightGray"
+                                   IsDoubleTapEnabled="True"
+                                                                       
+                                                                               >
+                    <controls:DataGrid.Columns>
+                        <controls:DataGridTextColumn Binding="{Binding LastName}" Header="משפחה" Width="100"/>
+                        <controls:DataGridTextColumn Binding="{Binding Adress}" Header="כתובת" Width="250"/>
+                        <controls:DataGridTextColumn Binding="{Binding Phon}" Header="טלפון" Width="150"/>
+
+                    </controls:DataGrid.Columns>
+
+                </controls:DataGrid>
+            </Grid>
+
+
+            <!-- לחצני פקודות -->
+            <Grid  Grid.Row="5" Grid.Column="1">
+                <StackPanel FlowDirection="LeftToRight"  Orientation="Horizontal">
+                    <Button x:ConnectionId='3' x:Name="btAdd" Margin="10"                    >
+                        <SymbolIcon Symbol="add"/>
+                    </Button>
+                    <Button x:ConnectionId='4' x:Name="btDelete" Margin="10"                       >
+                        <SymbolIcon Symbol="Delete"/>
+                    </Button>
+                </StackPanel>
+                 <Button x:ConnectionId='2' x:Name="btSaveTransactions"                                  HorizontalAlignment="Right" Margin="10" Visibility="Collapsed">
+                        <SymbolIcon Symbol="Save"/>
+                    </Button>
+            </Grid>
+
+
+
+
+        </Grid>
+
+    </Grid>
+</Page>
+

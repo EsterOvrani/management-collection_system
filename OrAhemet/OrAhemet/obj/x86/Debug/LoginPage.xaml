@@ -1,0 +1,63 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="OrAhemet.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OrAhemet"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+                          
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid FlowDirection="RightToLeft">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="/Assets/orhaemet_logo.png" />
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="200,50,200,0">
+            <!--שם משתמש-->
+            <StackPanel Margin="0,20">
+                <TextBlock x:ConnectionId='13' x:Name="tbName"  Text="שם משתמש" FontSize="25" HorizontalAlignment="Stretch"/>
+                <TextBox x:ConnectionId='14' x:Name="txtName" FontSize="25" HorizontalAlignment="Stretch"/>
+            </StackPanel>
+            <!--סיסמה-->
+            <StackPanel Margin="0,20">
+                <TextBlock x:ConnectionId='11' x:Name="tbPassWard"  Text="סיסמה" FontSize="25" HorizontalAlignment="Stretch"/>
+                <PasswordBox x:ConnectionId='12' x:Name="txtPassWard" FontSize="25" HorizontalAlignment="Stretch"/>
+            </StackPanel>
+            <!--תפקיד-->
+            <StackPanel x:ConnectionId='2' x:Name="spUserType" Margin="0,20" Visibility="Collapsed">
+                <TextBlock x:ConnectionId='9' x:Name="tbUserType"  Text="תפקיד" FontSize="25" HorizontalAlignment="Stretch"/>
+                <ComboBox x:ConnectionId='10' x:Name="cbUserType" HorizontalAlignment="Stretch" FontSize="25">
+                    <ComboBoxItem Content="מזכירה"/>
+                    <ComboBoxItem Content="מערכת גביה"/>
+                    <ComboBoxItem Content="מנהל"/>
+                </ComboBox>
+            </StackPanel>
+            <!--כניסה-->
+            <StackPanel>
+                <Button x:ConnectionId='7' x:Name="btnEnter" Content="כניסה" FontSize="25" HorizontalAlignment="Center" Margin="0,50,0,20" Width="200"                        Visibility="Collapsed"/>
+                <TextBlock x:ConnectionId='8' x:Name="tbComment" Text="" FontSize="25" Foreground="Red" HorizontalAlignment="Stretch" Height="70"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:ConnectionId='5' x:Name="btnAdd" Content="הוסף" FontSize="25" HorizontalAlignment="Center"  Width="200" Margin="0,0,10,0"                      Grid.Row="1" Grid.Column="1" Visibility="Collapsed"/>
+                <Button x:ConnectionId='6' x:Name="btnCencelAdd" Content="ביטול" FontSize="25" HorizontalAlignment="Center"  Width="200"                         Grid.Row="1" Grid.Column="1" Visibility="Collapsed"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:ConnectionId='3' x:Name="btnSave" Content="שמור" FontSize="25" HorizontalAlignment="Center"  Width="200"                       Grid.Row="1" Grid.Column="1" Margin="0,0,10,0"  RenderTransformOrigin="0.487,3.399" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Button x:ConnectionId='4' x:Name="btnCencelChange" Content="ביטול" FontSize="25" HorizontalAlignment="Center"  Width="200"                         Grid.Row="1" Grid.Column="1" Visibility="Collapsed"/>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Page>
+

@@ -1,0 +1,347 @@
+﻿<Page
+    x:Class="OrAhemet.familyDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OrAhemet"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:s ="using:OrAhemet.ServiceReference1" 
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" xmlns:controls1="using:OrAhemet.Controls"
+    Loading="Page_Loading"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid FlowDirection="RightToLeft">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <!--כותרת-->
+        <Grid Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel  HorizontalAlignment="Center"  Grid.Column="2" Grid.Row="1">
+                    <TextBlock FontSize ="30">
+                        <Run Text="משפחת"/>
+                        <Run Text="{Binding LastName}"/>
+                    </TextBlock>
+                    <TextBlock  FontSize ="30" >
+                        <Run Text="יתרת החוב:"/>
+                        <Run Text="{Binding TotalFamilyDebts}"/>
+                    </TextBlock>
+                </StackPanel>
+                <Button x:Name="btForward" Grid.Column="0" Grid.Row="0" Margin="10,0,0,0" Click="btForward_Click">
+                    <SymbolIcon Symbol="Forward" />
+                </Button>
+            </Grid>
+
+        </Grid>
+
+        <!--פרטים-->
+        <Grid Grid.Row="1">
+            <Pivot x:Name="rootPivot"  Margin="20">
+                <PivotItem x:Name="piFamilyDitels" Header="פרטי משפחה">
+                    <!--Pivot content goes here-->
+                    <Grid FlowDirection="RightToLeft">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+
+                        <controls1:GroupBox Header="פרטי הורים"  
+                                            Grid.Row="1" 
+                                            Grid.Column="1" 
+                                            FontSize="20">
+
+                            <controls1:FieldsInputPanel
+                                TitleColumnWidth="150"
+                                FieldColumnWidth="250"
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center">
+
+                                <TextBlock Text="שם האב"/>
+                                <TextBox Text="{Binding FatherName, Mode=TwoWay}"/>
+
+                                <TextBlock Text="תז האב"/>
+                                <TextBox Text="{Binding FatherTZ, Mode=TwoWay}"/>
+
+                                <TextBlock Text="שם האם"/>
+                                <TextBox Text="{Binding MotherName, Mode=TwoWay}"/>
+
+                                <TextBlock Text="תז האם"/>
+                                <TextBox Text="{Binding MotherID, Mode=TwoWay}"/>
+                            </controls1:FieldsInputPanel>
+
+                        </controls1:GroupBox>
+                        <controls1:GroupBox  Header="טלפונים"  
+                                            Grid.Row="3" 
+                                            Grid.Column="1" 
+                                            FontSize="20">
+
+                            <controls1:FieldsInputPanel
+                                TitleColumnWidth="150"
+                                FieldColumnWidth="250"
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center">
+
+                                <TextBlock Text="טלפון בית"/>
+                                <TextBox Text="{Binding Phon, Mode=TwoWay}"/>
+
+                                <TextBlock Text="פלאפון אב"/>
+                                <TextBox Text="{Binding FatherCellPhon, Mode=TwoWay}"/>
+
+                                <TextBlock Text="פלאפון אם"/>
+                                <TextBox Text="{Binding MotherCellPhon, Mode=TwoWay}"/>
+
+
+                            </controls1:FieldsInputPanel>
+
+                        </controls1:GroupBox>
+                        <controls1:GroupBox  Header="כתובת"  
+                                            Grid.Row="1" 
+                                            Grid.Column="3" 
+                                            FontSize="20">
+
+                            <controls1:FieldsInputPanel
+                                TitleColumnWidth="150"
+                                FieldColumnWidth="250"
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center">
+
+                                <TextBlock Text="כתובת"/>
+                                <TextBox Text="{Binding Adress, Mode=TwoWay}"/>
+
+                                <TextBlock Text="שם משפחה"/>
+                                <TextBox Text="{Binding LastName, Mode=TwoWay}"/>
+                            </controls1:FieldsInputPanel>
+
+                        </controls1:GroupBox>
+                        <controls1:GroupBox Header=""  
+                                            Grid.Row="3" 
+                                            Grid.Column="3" 
+                                            FontSize="20"
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Bottom">
+                            <Button x:Name="btnSaveFamily" 
+                                        Margin="10"                                             
+                                        Grid.Row="1" 
+                                        Grid.Column="3"
+                                        Click="btnSaveFamily_Click">
+                                <SymbolIcon Symbol="Save"/>
+                            </Button>
+
+                        </controls1:GroupBox>
+                    </Grid>
+
+                </PivotItem>
+                <PivotItem x:Name="piChildrenDitels" Header="פרטי ילדים">
+                    <!--Pivot content goes here-->
+                    <Grid FlowDirection="RightToLeft">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+
+                        <controls:DataGrid x:Name="dgChildren" 
+                                   Padding="0,0,0,320" 
+                                   IsReadOnly="False"  
+                                   Grid.Row="1"
+                                   AutoGenerateColumns="False" 
+                                   Background="LightGray"
+                                   IsDoubleTapEnabled="True">
+                            <controls:DataGrid.Columns>
+                                <controls:DataGridTextColumn Binding="{Binding ChildName}" Header="שם" Width="100"/>
+                                <controls:DataGridTextColumn Binding="{Binding ChildTZ}" Header="תעודת זהות" Width="150"/>
+                                <controls:DataGridTextColumn Binding="{Binding Class}" Header="כיתה" Width="70"/>
+                                <controls:DataGridTextColumn Binding="{Binding DateOfBirth}" Header="תאריך לידה" Width="150"/>
+                                <controls:DataGridTextColumn Binding="{Binding Clinic}" Header="קופת חולים" Width="150"/>
+                                <controls:DataGridTextColumn Binding="{Binding Comments}" Header="הערות" Width="150"/>
+                                <!--<controls:DataGridCheckBoxColumn Binding="{Binding IsChange}" Header="השתנה?" Width="100"/>-->
+                            </controls:DataGrid.Columns>
+                        </controls:DataGrid>
+
+                        <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal" Grid.Row="3">
+                            <Button x:Name="btAddChild" Margin="10" Click="btAddChild_Click">
+                                <SymbolIcon Symbol="add"/>
+                            </Button>
+                            <Button x:Name="btDeleteChild" Margin="10" Click="btDeleteChild_Click">
+                                <SymbolIcon Symbol="Delete"/>
+                            </Button>
+                            <Button x:Name="btSaveChild" Margin="10" Click="btSaveChild_Click">
+                                <SymbolIcon Symbol="Save"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </PivotItem>
+                <PivotItem x:Name="piChargesDitels" Header="פרטי חיוב">
+                    <!--Pivot content goes here-->
+                    <Grid FlowDirection="RightToLeft">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+
+                        <controls:DataGrid x:Name="dgCharges" 
+                                   Padding="0,0,0,320" 
+                                   IsReadOnly="false"  
+                                   Grid.Row="1"
+                                   AutoGenerateColumns="False" 
+                                   Background="LightGray"
+                                   IsDoubleTapEnabled="True">
+                            <controls:DataGrid.Columns>
+                                <controls:DataGridComboBoxColumn x:Name="a" Binding="{Binding Child.ChildName}" Header="שם ילד" Width="100"/>
+                                <!--<controls:DataGridComboBoxColumn  ItemsSource="{Binding ItemsSource, ElementName=dgChildren, Mode=OneWay}" Header="שם ילד" Width="100"/>-->
+                                <controls:DataGridTextColumn Binding="{Binding BillingDate}" Header="תאריך חוב" Width="100"/>
+                                <controls:DataGridTextColumn Binding="{Binding DatePayment}" Header="תאריך גביה" Width="100"/>
+                                <controls:DataGridTextColumn Binding="{Binding TypeCharge.Description}" Header="סוג החוב" Width="150"/>
+                                <controls:DataGridTextColumn Binding="{Binding TypeCharge.AmountToPay}" Header="סך החוב" Width="150"/>
+
+                            </controls:DataGrid.Columns>
+                        </controls:DataGrid>
+
+                        <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal" Grid.Row="3">
+                            <Button x:Name="btAddCharge" Margin="10" Click="btAddCharge_Click">
+                                <SymbolIcon Symbol="add"/>
+                            </Button>
+                            <Button x:Name="btDeleteCharge" Margin="10" Click="btDeleteCharge_Click">
+                                <SymbolIcon Symbol="Delete"/>
+                            </Button>
+                            <Button x:Name="btSaveCharge" Margin="10" Click="btSaveCharge_Click">
+                                <SymbolIcon Symbol="Save"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+
+                </PivotItem>
+                <PivotItem x:Name="piPaymentAccountsDitels" Header="פרטי אמצעי תשלום">
+                    <Grid FlowDirection="RightToLeft">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+
+                        <controls:DataGrid x:Name="dgCreditCards"
+                                           Grid.Row="1"
+                                           AutoGenerateColumns="False"
+                                           Background="LightGray">
+                            <controls:DataGrid.Columns>
+                                <controls:DataGridCheckBoxColumn Binding="{Binding IsActive}"
+                                                                 Width="75"
+                                                                 Header="פעיל"/>
+
+                                <controls:DataGridTextColumn Binding="{Binding Path=CreditCard.CardNumber}"
+                                                                 Width="150"
+                                                                 Header="מספר כרטיס"/>
+
+                                <controls:DataGridTextColumn Binding="{Binding Path=CreditCard.Validity}"
+                                                                 Width="100"
+                                                                 Header="תוקף"/>
+
+                                <controls:DataGridTextColumn Binding="{Binding Path=CreditCard.SecurityIterature}"
+                                                                 Width="150"
+                                                                 Header="ספרות ביטחון"/>
+
+                                <controls:DataGridTextColumn Binding="{Binding Path=CreditCard.NameCardHolder}"
+                                                                 Width="150"
+                                                                 Header="שם בעל הכרטיס"/>
+
+                                <controls:DataGridTextColumn Binding="{Binding Path=CreditCard.TZCardHolder}"
+                                                                 Width="150"
+                                                                 Header="תז בעל הכרטיס"/>
+
+
+                            </controls:DataGrid.Columns>
+                        </controls:DataGrid>
+                        <StackPanel x:Name="btnsCreditCard" FlowDirection="LeftToRight" Orientation="Horizontal" Grid.Row="2">
+                            <Button x:Name="btAddCreditCard" Click="btAddCreditCard_Click">
+                                <SymbolIcon Symbol="add"/>
+                            </Button>
+                            <Button x:Name="btDeleteCreditCard" Margin="10,0,0,0" Click="btDeleteCreditCard_Click">
+                                <SymbolIcon Symbol="Delete"/>
+                            </Button>
+                        </StackPanel>
+                        <controls:DataGrid x:Name="dgHorahatKeva"
+                                           Grid.Row="4"
+                                           AutoGenerateColumns="False"
+                                           Background="LightGray">
+                            <controls:DataGrid.Columns>
+                                <controls:DataGridCheckBoxColumn Binding="{Binding IsActive}"
+                                                                 Width="75"
+                                                                 Header="פעיל"/>
+
+
+                                <controls:DataGridTextColumn Binding="{Binding Path=HorahatKeva.BankNumber}"
+                                                                 Width="100"
+                                                                 Header="מספר בנק"/>
+
+                                <controls:DataGridTextColumn Binding="{Binding Path=HorahatKeva.BranchNumber}"
+                                                                 Width="120"
+                                                                 Header="מספר סניף"/>
+
+                                <controls:DataGridTextColumn Binding="{Binding Path=HorahatKeva.AccountNumber}"
+                                                                 Width="120"
+                                                                 Header="מספר חשבון"/>
+
+                                <controls:DataGridTextColumn Binding="{Binding Path=HorahatKeva.NameAccountHolders}"
+                                                                 Width="150"
+                                                                 Header="שם בעל החשבון"/>
+
+                                <controls:DataGridTextColumn Binding="{Binding Path=HorahatKeva.MonthlyBillingDate}"
+                                                                 Width="200"
+                                                                 Header="תאריך לחיוב חודשי"/>
+
+                            </controls:DataGrid.Columns>
+                        </controls:DataGrid>
+                        <StackPanel x:Name="btnsHorahtKeva" FlowDirection="LeftToRight" Orientation="Horizontal" Grid.Row="5">
+                            <Button x:Name="btAddHoraotKeva" Click="btAddHoraotKeva_Click">
+                                <SymbolIcon Symbol="add"/>
+                            </Button>
+                            <Button x:Name="btDeleteHoraotKeva" Margin="10,0,0,0" Click="btDeleteHoraotKeva_Click">
+                                <SymbolIcon Symbol="Delete"/>
+                            </Button>
+                            <Button x:Name="btSavePaymentAccounts" Margin="10,0,0,0" Click="btSavePaymentAccounts_Click">
+                                <SymbolIcon Symbol="Save"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+
+                </PivotItem>
+            </Pivot>
+        </Grid>
+
+
+
+    </Grid>
+</Page>

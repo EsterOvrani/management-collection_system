@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OhrHaemetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="OhrHaemetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Charge" EntityType="OhrHaemetModel.Charge" />
+    <EntitySet Name="Child" EntityType="OhrHaemetModel.Child" />
+    <EntitySet Name="CreditCard" EntityType="OhrHaemetModel.CreditCard" />
+    <EntitySet Name="Family" EntityType="OhrHaemetModel.Family" />
+    <EntitySet Name="HorahatKeva" EntityType="OhrHaemetModel.HorahatKeva" />
+    <EntitySet Name="PaymentAccount" EntityType="OhrHaemetModel.PaymentAccount" />
+    <EntitySet Name="sysdiagrams" EntityType="OhrHaemetModel.sysdiagrams" />
+    <EntitySet Name="Transaction" EntityType="OhrHaemetModel.Transaction" />
+    <EntitySet Name="TypeCharge" EntityType="OhrHaemetModel.TypeCharge" />
+    <EntitySet Name="User" EntityType="OhrHaemetModel.User" />
+    <FunctionImport Name="DeleteCharge">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteChild">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteCreditCard">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteFamily">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteHorahatKeva">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeletePaymentAccount">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteTransaction">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteTypeCharge">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteUser">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(OhrHaemetModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(OhrHaemetModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <EntityType Name="Charge">
+    <Key>
+      <PropertyRef Name="ChargeID" />
+    </Key>
+    <Property Name="ChargeID" Type="Int32" Nullable="false" />
+    <Property Name="FamilyID" Type="Int32" Nullable="false" />
+    <Property Name="ChildID" Type="Int32" />
+    <Property Name="TypeChargeID" Type="Int32" Nullable="false" />
+    <Property Name="BillingDate" Type="Time" Precision="7" />
+    <Property Name="DatePayment" Type="Time" Precision="7" />
+    <Property Name="PaymentAccountsID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Child">
+    <Key>
+      <PropertyRef Name="ChildID" />
+    </Key>
+    <Property Name="ChildID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyID" Type="Int32" Nullable="false" />
+    <Property Name="ChildName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ChildTZ" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="Time" Precision="7" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Clinic" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CreditCard">
+    <Key>
+      <PropertyRef Name="CreditCardID" />
+    </Key>
+    <Property Name="CreditCardID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentAccountsID" Type="Int32" Nullable="false" />
+    <Property Name="CardNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Validity" Type="Time" Precision="7" />
+    <Property Name="SecurityIterature" Type="Int32" />
+    <Property Name="NameCardHolder" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TZCardHolder" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Family">
+    <Key>
+      <PropertyRef Name="FamilyID" />
+    </Key>
+    <Property Name="FamilyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FatherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FatherTZ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FatherCellPhon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MotherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MotherID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MotherCellPhon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HorahatKeva">
+    <Key>
+      <PropertyRef Name="HorahatKevaID" />
+    </Key>
+    <Property Name="HorahatKevaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentAccountsID" Type="Int32" Nullable="false" />
+    <Property Name="BankNumber" Type="Int32" />
+    <Property Name="AccountNumber" Type="Int32" />
+    <Property Name="BranchNumber" Type="Int32" />
+    <Property Name="NameAccountHolders" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MonthlyBillingDate" Type="Time" Precision="7" />
+  </EntityType>
+  <EntityType Name="PaymentAccount">
+    <Key>
+      <PropertyRef Name="PaymentAccountsID" />
+    </Key>
+    <Property Name="PaymentAccountsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyID" Type="Int32" Nullable="false" />
+    <Property Name="PeymentType" Type="Int16" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="TransactionsID" />
+    </Key>
+    <Property Name="TransactionsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChargesID" Type="Int32" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="Comments" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TypeCharge">
+    <Key>
+      <PropertyRef Name="TypeChargesID" />
+    </Key>
+    <Property Name="TypeChargesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AmountToPay" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

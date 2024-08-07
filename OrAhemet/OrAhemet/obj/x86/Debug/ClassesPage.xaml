@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="OrAhemet.ClassesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OrAhemet"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid FlowDirection="RightToLeft">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="כיתות" FontSize="50" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:ConnectionId='6' x:Name="Class1" Content="כיתה א" FontSize="40" Margin="0,0,20,0"/>
+            <Button x:ConnectionId='7' x:Name="Class2" Content="כיתה ב" FontSize="40" Margin="0,0,20,0"/>
+            <Button x:ConnectionId='8' x:Name="Class3" Content="כיתה ג" FontSize="40" Margin="0,0,20,0"/>
+            <Button x:ConnectionId='9' x:Name="Class4" Content="כיתה ד" FontSize="40" Margin="0,0,20,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:ConnectionId='2' x:Name="Class5" Content="כיתה ה" FontSize="40" Margin="0,0,20,0"/>
+            <Button x:ConnectionId='3' x:Name="Class6" Content="כיתה ו" FontSize="40" Margin="0,0,20,0"/>
+            <Button x:ConnectionId='4' x:Name="Class7" Content="כיתה ז" FontSize="40" Margin="0,0,20,0"/>
+            <Button x:ConnectionId='5' x:Name="Class8" Content="כיתה ח" FontSize="40" Margin="0,0,20,0"/>
+        </StackPanel>
+    </Grid>
+</Page>
+

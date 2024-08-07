@@ -1,0 +1,124 @@
+G:\אסתי פרויקט\פרוייקט שרת\Model\bin\Debug\Model.dll
+G:\אסתי פרויקט\פרוייקט שרת\Model\bin\Debug\Model.pdb
+G:\אסתי פרויקט\פרוייקט שרת\Model\obj\Debug\Model.csprojAssemblyReference.cache
+G:\אסתי פרויקט\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+G:\אסתי פרויקט\פרוייקט שרת\Model\obj\Debug\Model.dll
+G:\אסתי פרויקט\פרוייקט שרת\Model\obj\Debug\Model.pdb
+G:\אסתי פרויקט\גיבויים\30-03\פרוייקט שרת\Model\bin\Debug\Model.dll
+G:\אסתי פרויקט\גיבויים\30-03\פרוייקט שרת\Model\bin\Debug\Model.pdb
+G:\אסתי פרויקט\גיבויים\30-03\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+G:\אסתי פרויקט\גיבויים\30-03\פרוייקט שרת\Model\obj\Debug\Model.dll
+G:\אסתי פרויקט\גיבויים\30-03\פרוייקט שרת\Model\obj\Debug\Model.pdb
+C:\Users\אסתי\Desktop\פרויקט אסתי\גיבויים\05-02\פרוייקט שרת\Model\bin\Debug\Model.dll
+C:\Users\אסתי\Desktop\פרויקט אסתי\גיבויים\05-02\פרוייקט שרת\Model\bin\Debug\Model.pdb
+C:\Users\אסתי\Desktop\פרויקט אסתי\גיבויים\05-02\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\אסתי\Desktop\פרויקט אסתי\גיבויים\05-02\פרוייקט שרת\Model\obj\Debug\Model.dll
+C:\Users\אסתי\Desktop\פרויקט אסתי\גיבויים\05-02\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-30\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-30\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-30\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-30\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-30\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-31\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-31\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-31\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-31\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-31\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\05-31\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-02\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-02\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-02\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-02\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-02\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-02\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-05\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-05\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-05\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-05\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-05\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-09\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-09\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-09\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-09\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-09\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-12\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-12\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-12\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-12\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-12\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-19\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-19\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-19\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-19\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-19\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-19\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-21\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-21\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-21\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-21\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-21\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-22\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-22\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-22\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-22\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-22\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-22\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-23\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-23\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-23\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-23\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-23\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-23\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-24\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-24\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-24\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-24\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-24\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-25\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-25\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-25\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-25\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-25\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-25\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26-1\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26-1\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26-1\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26-1\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26-1\פרוייקט שרת\Model\obj\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-26-1\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-27\פרוייקט שרת\Model\bin\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-27\פרוייקט שרת\Model\bin\Debug\Model.pdb
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-27\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-27\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-27\פרוייקט שרת\Model\obj\Debug\Model.dll
+D:\אסתי אחסון\שולחן עבודה ישן\03-05-22\פרויקט אסתי\גיבויים\06-27\פרוייקט שרת\Model\obj\Debug\Model.pdb
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\bin\Debug\Model.dll.config
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\bin\Debug\Model.dll
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\bin\Debug\Model.pdb
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\bin\Debug\EntityFramework.dll
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\bin\Debug\EntityFramework.xml
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\obj\Debug\Model.dll
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\obj\Debug\Model.pdb
+C:\Users\אסתי\Desktop\אבא\‏‏תיקיה חדשה\07-05\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\bin\Debug\Model.dll.config
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\bin\Debug\Model.dll
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\bin\Debug\Model.pdb
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\bin\Debug\EntityFramework.dll
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\bin\Debug\EntityFramework.xml
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\obj\Debug\Model.dll
+C:\Users\אסתי\Desktop\אבא\SQL Based\Current\פרוייקט שרת\Model\obj\Debug\Model.pdb

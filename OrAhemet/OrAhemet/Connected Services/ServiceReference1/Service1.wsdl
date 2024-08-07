@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Server/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Server/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Server/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetUserTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTable" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFamilyTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFamilyTable" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFamilyTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFamilyTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTransactionsWithDebts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsWithDebts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTransactionsWithDebts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsWithDebtsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTransactionsWithoutDebts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsWithoutDebts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTransactionsWithoutDebts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsWithoutDebtsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChargeByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChargeByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertFamily_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFamily" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertFamily_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFamilyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteFamily_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFamily" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteFamily_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFamilyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFamilyByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFamilyByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFamilyByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFamilyByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChildrenByFamilyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildrenByFamilyID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChildrenByFamilyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildrenByFamilyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPaymentAccountsByFamilyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentAccountsByFamilyID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPaymentAccountsByFamilyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentAccountsByFamilyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCreditCardByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCreditCardByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCreditCardByPaymentAccountID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardByPaymentAccountID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCreditCardByPaymentAccountID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardByPaymentAccountIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHorahatKevaByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHorahatKevaByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHorahatKevaByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHorahatKevaByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHorahatKevaByPaymentAccountID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHorahatKevaByPaymentAccountID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHorahatKevaByPaymentAccountID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHorahatKevaByPaymentAccountIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChargesByFamilyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargesByFamilyID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChargesByFamilyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargesByFamilyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChildByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChildByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeChargeByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeChargeByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTypeChargeByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeChargeByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertChild_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertChild" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertChild_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertChildResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateChild_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChild" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateChild_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChildResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteChild_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteChild" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteChild_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteChildResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateFamily_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFamily" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateFamily_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFamilyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCharge_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCharge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCharge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCharge_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCharge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCharge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCharge_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCharge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCharge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCreditCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCreditCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCreditCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCreditCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCreditCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCreditCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertHorahatKeva_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertHorahatKeva" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertHorahatKeva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertHorahatKevaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateHorahatKeva_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHorahatKeva" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateHorahatKeva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHorahatKevaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteHorahatKeva_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHorahatKeva" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteHorahatKeva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHorahatKevaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPaymentAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPaymentAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPaymentAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPaymentAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPayment" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePayment_CreditCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePayment_CreditCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePayment_CreditCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePayment_CreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePayment_HOK_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePayment_HOK" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePayment_HOK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePayment_HOKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePaymentAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePaymentAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePaymentAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePaymentAccountsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetUserTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserTable" message="tns:IService1_GetUserTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserTableResponse" message="tns:IService1_GetUserTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFamilyTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFamilyTable" message="tns:IService1_GetFamilyTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFamilyTableResponse" message="tns:IService1_GetFamilyTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsWithDebts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTransactionsWithDebts" message="tns:IService1_GetTransactionsWithDebts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTransactionsWithDebtsResponse" message="tns:IService1_GetTransactionsWithDebts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsWithoutDebts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTransactionsWithoutDebts" message="tns:IService1_GetTransactionsWithoutDebts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTransactionsWithoutDebtsResponse" message="tns:IService1_GetTransactionsWithoutDebts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetChargeByID" message="tns:IService1_GetChargeByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetChargeByIDResponse" message="tns:IService1_GetChargeByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertUser" message="tns:IService1_InsertUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertUserResponse" message="tns:IService1_InsertUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateUser" message="tns:IService1_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateUserResponse" message="tns:IService1_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteUser" message="tns:IService1_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteUserResponse" message="tns:IService1_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFamily">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertFamily" message="tns:IService1_InsertFamily_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertFamilyResponse" message="tns:IService1_InsertFamily_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFamily">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteFamily" message="tns:IService1_DeleteFamily_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteFamilyResponse" message="tns:IService1_DeleteFamily_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFamilyByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFamilyByID" message="tns:IService1_GetFamilyByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFamilyByIDResponse" message="tns:IService1_GetFamilyByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildrenByFamilyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetChildrenByFamilyID" message="tns:IService1_GetChildrenByFamilyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetChildrenByFamilyIDResponse" message="tns:IService1_GetChildrenByFamilyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentAccountsByFamilyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPaymentAccountsByFamilyID" message="tns:IService1_GetPaymentAccountsByFamilyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPaymentAccountsByFamilyIDResponse" message="tns:IService1_GetPaymentAccountsByFamilyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCreditCardByID" message="tns:IService1_GetCreditCardByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCreditCardByIDResponse" message="tns:IService1_GetCreditCardByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardByPaymentAccountID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCreditCardByPaymentAccountID" message="tns:IService1_GetCreditCardByPaymentAccountID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCreditCardByPaymentAccountIDResponse" message="tns:IService1_GetCreditCardByPaymentAccountID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHorahatKevaByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetHorahatKevaByID" message="tns:IService1_GetHorahatKevaByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetHorahatKevaByIDResponse" message="tns:IService1_GetHorahatKevaByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHorahatKevaByPaymentAccountID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetHorahatKevaByPaymentAccountID" message="tns:IService1_GetHorahatKevaByPaymentAccountID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetHorahatKevaByPaymentAccountIDResponse" message="tns:IService1_GetHorahatKevaByPaymentAccountID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargesByFamilyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetChargesByFamilyID" message="tns:IService1_GetChargesByFamilyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetChargesByFamilyIDResponse" message="tns:IService1_GetChargesByFamilyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetChildByID" message="tns:IService1_GetChildByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetChildByIDResponse" message="tns:IService1_GetChildByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeChargeByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTypeChargeByID" message="tns:IService1_GetTypeChargeByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTypeChargeByIDResponse" message="tns:IService1_GetTypeChargeByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertChild">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertChild" message="tns:IService1_InsertChild_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertChildResponse" message="tns:IService1_InsertChild_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChild">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateChild" message="tns:IService1_UpdateChild_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateChildResponse" message="tns:IService1_UpdateChild_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChild">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteChild" message="tns:IService1_DeleteChild_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteChildResponse" message="tns:IService1_DeleteChild_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFamily">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateFamily" message="tns:IService1_UpdateFamily_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateFamilyResponse" message="tns:IService1_UpdateFamily_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertTransaction" message="tns:IService1_InsertTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertTransactionResponse" message="tns:IService1_InsertTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateTransaction" message="tns:IService1_UpdateTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateTransactionResponse" message="tns:IService1_UpdateTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCharge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertCharge" message="tns:IService1_InsertCharge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertChargeResponse" message="tns:IService1_InsertCharge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCharge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateCharge" message="tns:IService1_UpdateCharge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateChargeResponse" message="tns:IService1_UpdateCharge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCharge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteCharge" message="tns:IService1_DeleteCharge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteChargeResponse" message="tns:IService1_DeleteCharge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCreditCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertCreditCard" message="tns:IService1_InsertCreditCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertCreditCardResponse" message="tns:IService1_InsertCreditCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateCreditCard" message="tns:IService1_UpdateCreditCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateCreditCardResponse" message="tns:IService1_UpdateCreditCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCreditCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteCreditCard" message="tns:IService1_DeleteCreditCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteCreditCardResponse" message="tns:IService1_DeleteCreditCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertHorahatKeva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertHorahatKeva" message="tns:IService1_InsertHorahatKeva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertHorahatKevaResponse" message="tns:IService1_InsertHorahatKeva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHorahatKeva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateHorahatKeva" message="tns:IService1_UpdateHorahatKeva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateHorahatKevaResponse" message="tns:IService1_UpdateHorahatKeva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHorahatKeva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteHorahatKeva" message="tns:IService1_DeleteHorahatKeva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteHorahatKevaResponse" message="tns:IService1_DeleteHorahatKeva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPaymentAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertPaymentAccounts" message="tns:IService1_InsertPaymentAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertPaymentAccountsResponse" message="tns:IService1_InsertPaymentAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertPayment" message="tns:IService1_InsertPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertPaymentResponse" message="tns:IService1_InsertPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePayment_CreditCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletePayment_CreditCard" message="tns:IService1_DeletePayment_CreditCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletePayment_CreditCardResponse" message="tns:IService1_DeletePayment_CreditCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePayment_HOK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletePayment_HOK" message="tns:IService1_DeletePayment_HOK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletePayment_HOKResponse" message="tns:IService1_DeletePayment_HOK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletePaymentAccounts" message="tns:IService1_DeletePaymentAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletePaymentAccountsResponse" message="tns:IService1_DeletePaymentAccounts_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserTable">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFamilyTable">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFamilyTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsWithDebts">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTransactionsWithDebts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsWithoutDebts">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTransactionsWithoutDebts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetChargeByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFamily">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertFamily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFamily">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteFamily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFamilyByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFamilyByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildrenByFamilyID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetChildrenByFamilyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentAccountsByFamilyID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPaymentAccountsByFamilyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCreditCardByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardByPaymentAccountID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCreditCardByPaymentAccountID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHorahatKevaByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetHorahatKevaByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHorahatKevaByPaymentAccountID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetHorahatKevaByPaymentAccountID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargesByFamilyID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetChargesByFamilyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetChildByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeChargeByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTypeChargeByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertChild">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertChild" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChild">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateChild" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChild">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteChild" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFamily">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateFamily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransaction">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaction">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCharge">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCharge">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCharge">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCreditCard">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertCreditCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCard">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateCreditCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCreditCard">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteCreditCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertHorahatKeva">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertHorahatKeva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHorahatKeva">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateHorahatKeva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHorahatKeva">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteHorahatKeva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPaymentAccounts">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertPaymentAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPayment">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePayment_CreditCard">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletePayment_CreditCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePayment_HOK">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletePayment_HOK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentAccounts">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletePaymentAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Server/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
